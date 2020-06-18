@@ -39,6 +39,8 @@ jobs:
             - ~/.gradle
           key: v1-dependencies-{{ checksum "build.gradle" }}
 
+      - run: yes | ~/Library/Android/sdk/tools/bin/sdkmanager --licenses
+
       # run tests!
       - run: ./gradlew lint test
       # Store test results
