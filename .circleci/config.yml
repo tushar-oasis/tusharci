@@ -42,8 +42,8 @@ jobs:
           key: v1-dependencies-{{ checksum "build.gradle" }}
 
       - run:
-        name: Build
-        command: ./gradlew assembleDebug
+          name: Build
+          command: ./gradlew assembleDebug
 
         # run tests!
       - run:
